@@ -1,0 +1,121 @@
+<!doctype html>
+<html ⚡ lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>Sabrina - Profil Galerisi</title>
+    <link rel="canonical" href="https://www.ornek-site.com">
+    <style amp-custom>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 480px;
+            margin: auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .profile-box {
+            display: flex;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .profile-info h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .profile-info .location {
+            margin-top: 6px;
+            font-size: 15px;
+            color: #333;
+        }
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 12px;
+        }
+        .whatsapp-btn img {
+            width: 28px;
+            margin-right: 10px;
+        }
+
+        /* 4'LÜ GALERİ */
+      /* Foto Galeri İçindeki Resimleri Sabit Oranda Yap */
+.foto-galeri-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.foto-galeri-item img {
+    width: 100%;
+    aspect-ratio: 190 / 320; /* ORAN: 0.59 → 190x320 */
+    object-fit: cover;       /* Fotoğraf taşmaz, kırpılmaz */
+    display: block;
+    border-radius: 10px;
+}
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- PROFİL -->
+        <div class="profile-box">
+            <amp-img src="https://i.imgyukle.com/2025/12/02/CdEDQH.png" width="90" height="90" class="profile-img" layout="fixed" alt="Sabrina"></amp-img>
+            <div class="profile-info">
+                <h2>SABRINA</h2>
+                <div class="location">Konum:  </div>
+            </div>
+        </div>
+
+        <!-- WHATSAPP BUTONU -->
+        <a class="whatsapp-btn" href="https://wa.me/905360390601" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            WhatsApp: 0536 039 06 01
+        </a>
+
+        <!-- 4'LÜ FOTOĞRAF GALERİSİ -->
+        <div class="gallery">
+            <div class="gallery-grid">
+                <a href="ilanlar/sabrina.html" target="_blank">
+                    <amp-img src="https://i0-wp-com.cdn.ampproject.org/i/s/i0.wp.com/hedonebiz.site/uploads/izmir-universiteli_1.png" width="150" height="150" layout="responsive" alt="Fotoğraf 1"></amp-img>
+                </a>
+                <a href="ilanlar/sabrina.html" target="_blank">
+                    <amp-img src="https://i0-wp-com.cdn.ampproject.org/i/s/i0.wp.com/hedonebiz.site/uploads/elena.png" width="150" height="150" layout="responsive" alt="Fotoğraf 2"></amp-img>
+                </a>
+                <a href="ilanlar/sabrina.html" target="_blank">
+                    <amp-img src="https://i0-wp-com.cdn.ampproject.org/i/s/i0.wp.com/hedonebiz.site/uploads/cilgin-ikili.png" width="150" height="150" layout="responsive" alt="Fotoğraf 3"></amp-img>
+                </a>
+                <a href="ilanlar/sabrina.html" target="_blank">
+                    <amp-img src="https://i0-wp-com.cdn.ampproject.org/i/s/i0.wp.com/hedonebiz.site/uploads/cilgin-ikili.png" width="150" height="150" layout="responsive" alt="Fotoğraf 4"></amp-img>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ALTA SABİT WHATSAPP BUTONU -->
+    <a class="bottom-whatsapp" href="https://wa.me/905360390601" target="_blank">
+        WhatsApp Tıkla ➜
+    </a>
+</body>
+</html>
