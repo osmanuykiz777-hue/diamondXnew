@@ -2,416 +2,271 @@
 <html lang="tr" amp>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="theme-color" content="#000000">
-    <link rel="canonical" href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew">
-    <title>Profil Galerisi – Kart Tasarımı</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>DiamondX - Profil Galerisi</title>
 
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org/",
-        "@type": "WebSite",
-        "name": "Profil Galerisi – Kart Tasarımı",
-        "alternateName": "Şehir Profil Kartları – Galeri",
-        "url": "https://www.ornek-site.com/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.ornek-site.com/search/{search_term}",
-            "query-input": "required name=search_term"
-        }
-    }
-    </script>
+    <!-- canonical to your GitHub Pages -->
+    <link rel="canonical" href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-
+    <!-- AMP required scripts -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+
+    <style amp-boilerplate>
+        body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+             -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+             -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+             animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+        @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+        @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+        @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+        @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
 
     <style amp-custom>
-    *{-webkit-box-sizing:border-box;box-sizing:border-box}
-    body.body{background:#e8e8e8;font-family:lato;font-weight:400;color:#363636}
-    .better-amp-wrapper{max-width:780px;margin:0 auto;background:#fff}
-
-    /* Başlık */
-    .site-header {
-        height:52px;
-        background: linear-gradient(90deg, #0379c4, #5ab3f0);
-        color:#fff;
-        text-align:center;
-    }
-
-    .text-logo {
-        font-family: 'Righteous', cursive;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 52px;
-        vertical-align: middle;
-        display: inline-block;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-
-    .logo-icon {
-        font-size: 32px;
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-
-    /* Grid yapısı */
-    .grid-container { display: grid; background: #150BD1; }
-    .grid-item { margin: 1px; }
-    @media(max-width:399px){ .grid-container{ grid-template-columns:repeat(2, 1fr);} }
-    @media(min-width:400px){ .grid-container{ grid-template-columns:repeat(2, 1fr);} }
-    @media(min-width:900px){ .grid-container{ grid-template-columns:repeat(3, 1fr);} }
-    @media(min-width:1200px){ .grid-container{ grid-template-columns:repeat(4, 1fr);} }
-
-    /* Kart tasarımı */
-    .ads-itemm {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #6a11cb, #2575fc);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
-    }
-
-    .ads-itemm:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-        filter: brightness(1.1);
-    }
-
-    .ads-itemm-photo img {
-        width:100%;
-        height:auto;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        transition: transform 0.3s;
-    }
-
-    .ads-itemm:hover .ads-itemm-photo img {
-        transform: scale(1.05);
-    }
-
-    /* İletişim barı */
-    .ilan-sikayet-bg{ background:#000; color:#fff; padding:12px; text-align:center; }
-
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#222}
+        .wrapper{max-width:780px;margin:0 auto;background:#fff;min-height:100vh}
+        .site-header{height:56px;background:linear-gradient(90deg,#0379c4,#5ab3f0);color:#fff;display:flex;align-items:center;justify-content:center}
+        .branding{font-family:'Righteous',cursive;font-size:24px}
+        .ilan-sikayet-bg{background:#000;color:#fff;padding:10px;text-align:center}
+        .grid-container{display:grid;gap:6px;padding:10px;background:#150BD1;grid-template-columns:repeat(2,1fr)}
+        @media(min-width:900px){.grid-container{grid-template-columns:repeat(3,1fr)}}
+        @media(min-width:1200px){.grid-container{grid-template-columns:repeat(4,1fr)}}
+        .grid-item{margin:0}
+        .ads-itemm{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#6a11cb,#2575fc);box-shadow:0 4px 10px rgba(0,0,0,0.18);transition:transform .25s}
+        .ads-itemm:hover{transform:translateY(-6px)}
+        .ads-itemm .photo{display:block}
+        .ads-itemm amp-img{display:block;width:100%;height:auto;border-radius:8px}
+        .footer{background:#000;color:#fff;text-align:center;padding:18px;margin-top:18px;font-size:13px}
+        .note{padding:10px;color:#666;text-align:center}
     </style>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
-<body class="home blog wp-theme-sos body sticky-nav">
-
-<div class="better-amp-wrapper">
-
+<body>
+<div class="wrapper" role="main">
     <header class="site-header">
-        <a href="https://www.ornek-site.com" style="text-decoration:none; color:#fff;">
-            <span class="logo-icon">💎</span>
-            <span class="branding text-logo">DiamondX Elmas</span>
-        </a>
+        <div class="branding">💎 DiamondX Elmas</div>
     </header>
 
     <div class="ilan-sikayet-bg">
-        <a href="https://wa.me/905XXXXXXXXX" target="_blank" style="color:#fff;text-decoration:none;">
-            İletişim & İlan Verme Hattı
-        </a>
+        <a href="https://wa.me/905XXXXXXXXX" target="_blank" style="color:#fff;text-decoration:none;">İletişim &amp; İlan Verme Hattı</a>
     </div>
 
-    <!-- Tüm kategoriler kaldırıldı -->
-    <!-- Tüm başlıklar kaldırıldı -->
-
+    <!-- GRID: tüm kartlar burada -->
     <div class="grid-container">
-<!-- Kart 1 -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/ALYA.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img 
-                    alt="Alya"
-                    src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ALYA.png"
-                    width="332" 
-                    height="552" 
-                    layout="responsive">
-                </amp-img>
+
+        <!-- Kart 1 - ALYA -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/ALYA.html" target="_blank" class="photo" rel="noopener">
+                    <amp-img alt="ALYA"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ALYA.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 2 -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/BANUUUU.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img 
-                    alt="Banu"
-                    src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/BANUUUU.png"
-                    width="332"
-                    height="552"
-                    layout="responsive">
-                </amp-img>
+        <!-- Kart 2 - BANUUUU -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/BANUUUU.html" target="_blank" rel="noopener">
+                    <amp-img alt="BANU"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/BANUUUU.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 3 (whatsapp) -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://wa.me/905551112233" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img 
-                    alt="İlan İçin"
-                    src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/İLANİÇİN.png"
-                    width="332"
-                    height="552"
-                    layout="responsive">
-                </amp-img>
+        <!-- Kart 3 - ILANICIN (WhatsApp) -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://wa.me/905551112233" target="_blank" rel="noopener">
+                    <amp-img alt="IlanIcin"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ILANICIN.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 4 -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/BERİl.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Beril" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/BERİl.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 4 - BERIL -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/BERIL.html" target="_blank" rel="noopener">
+                    <amp-img alt="BERIL"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/BERIL.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 5 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/CANSU.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Cansu" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/CANSU.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 5 - CANSU -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/CANSU.html" target="_blank" rel="noopener">
+                    <amp-img alt="CANSU"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/CANSU.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 6 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/CEYDA.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Ceyda" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/CEYDA.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 6 - CEYDA -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/CEYDA.html" target="_blank" rel="noopener">
+                    <amp-img alt="CEYDA"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/CEYDA.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 7 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/CNN.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="CNN" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/diamondXnew/CNN.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 7 - CNN -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/CNN.html" target="_blank" rel="noopener">
+                    <amp-img alt="CNN"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/CNN.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 8 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://wa.me/905551112233" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img 
-                    alt="İlan İçin"
-                    src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/İLANİÇİN.png"
-                    width="332"
-                    height="552"
-                    layout="responsive">
-                </amp-img>
+        <!-- Kart 8 - ILANICIN (tekrar) -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://wa.me/905551112233" target="_blank" rel="noopener">
+                    <amp-img alt="IlanIcin"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ILANICIN.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-
-<!-- Kart 9 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/FATOŞ.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Fatoş" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/FATOŞ.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 9 - FATOS -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/FATOS.html" target="_blank" rel="noopener">
+                    <amp-img alt="FATOS"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/FATOS.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 10 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/HALE.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Hale" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/HALE.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 10 - HALE -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/HALE.html" target="_blank" rel="noopener">
+                    <amp-img alt="HALE"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/HALE.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 11 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/HELN.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Heln" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/HELN.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 11 - HELN -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/HELN.html" target="_blank" rel="noopener">
+                    <amp-img alt="HELN"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/HELN.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 12 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/NUR.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Nur" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/NUR.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 12 - NUR -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/NUR.html" target="_blank" rel="noopener">
+                    <amp-img alt="NUR"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/NUR.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 13 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/MERVE.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Merve" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/MERVE.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 13 - MERVE -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/MERVE.html" target="_blank" rel="noopener">
+                    <amp-img alt="MERVE"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/MERVE.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 14 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/SU.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Su" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/SU.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 14 - SU -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/SU.html" target="_blank" rel="noopener">
+                    <amp-img alt="SU"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/SU.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 15 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/SULE.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Sule" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/SULE.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 15 - SULE -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/SULE.html" target="_blank" rel="noopener">
+                    <amp-img alt="SULE"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/SULE.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 16 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/SUZAN.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Suzan" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/SUZAN.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 16 - SUZAN -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/SUZAN.html" target="_blank" rel="noopener">
+                    <amp-img alt="SUZAN"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/SUZAN.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 17 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/ilan/EMİNE.html" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img alt="Emine" src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/EMİNE.png" width="332" height="552" layout="responsive"></amp-img>
+        <!-- Kart 17 - EMINE -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ilan/EMINE.html" target="_blank" rel="noopener">
+                    <amp-img alt="EMINE"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/EMINE.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Kart 18 – WhatsApp -->
-<div class="grid-item">
-    <div class="ads-itemm">
-        <a href="https://wa.me/905551112233" target="_blank">
-            <div class="ads-itemm-photo">
-                <amp-img 
-                    alt="İlan İçin"
-                    src="https://github.com/vitrinprenses-com-vtrn46/diamondXnew/İLANİÇİN.png"
-                    width="332"
-                    height="552"
-                    layout="responsive">
-                </amp-img>
+        <!-- Kart 18 - ILANICIN (WhatsApp tekrar) -->
+        <div class="grid-item">
+            <div class="ads-itemm">
+                <a href="https://wa.me/905551112233" target="_blank" rel="noopener">
+                    <amp-img alt="IlanIcin"
+                        src="https://vitrinprenses-com-vtrn46.github.io/diamondXnew/ILANICIN.png"
+                        width="332" height="552" layout="responsive"></amp-img>
+                </a>
             </div>
-        </a>
-    </div>
-</div>
+        </div>
 
-<!-- Homepage Slider -->
-<div class="homepage-slider" style="max-width:780px;margin:20px auto;">
-    <amp-carousel width="780" height="300" layout="responsive" type="slides">
-        <amp-img src="https://picsum.photos/780/300?random=1" width="780" height="300" layout="responsive" alt="Slider 1"></amp-img>
-        <amp-img src="https://picsum.photos/780/300?random=2" width="780" height="300" layout="responsive" alt="Slider 2"></amp-img>
-        <amp-img src="https://picsum.photos/780/300?random=3" width="780" height="300" layout="responsive" alt="Slider 3"></amp-img>
-    </amp-carousel>
-</div>
+    </div> <!-- /grid-container -->
 
-<!-- Kategoriler Bölümü -->
-<div class="kategoriler" style="max-width:780px;margin:20px auto;">
-    <h2 style="text-align:center;color:#333;">Kategoriler</h2>
-    <ul class="kategoriler-listesi">
-        <li class="kategori-item"><a href="#"> </a></li>
- 
-    </ul>
-</div>
+    <div class="note">Site: https://vitrinprenses-com-vtrn46.github.io/diamondXnew/</div>
 
-<!-- Footer -->
-<footer class="better-amp-footer" style="background:#000;color:#fff;text-align:center;padding:20px 10px;margin-top:40px;">
-    <div class="better-amp-copyright">
+    <footer class="footer">
         <p>Dikkat: Bu internet sitesi 21 yaşından küçük kullanıcılar için önerilmez.</p>
         <p>&copy; 2020 DiamondX Elmas</p>
-    </div>
-</footer>
+    </footer>
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
